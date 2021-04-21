@@ -3,7 +3,11 @@ const app = express();
 const port = 3000;
 
 app.get("/", function(req, res){
-    res.send("Hello, World!");
+    res.sendFile(__dirname + "/index.html");
+})
+
+app.post("/", function(req, res){
+    res.send("Thanks for posting that!");
 })
 
 app.listen(port, function(){
