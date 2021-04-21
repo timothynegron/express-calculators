@@ -45,6 +45,25 @@ app.post("/", function(req, res){
 Run `npm install body-parser` command
 * Adds body-parser dependency
 
+### `Step 5`
+
+Add bodyParser through require and app.use()
+
+```javascript
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: true}));
+```
+
+### `Step 6`
+
+Use req.body to access data within app.post()
+* Forms: Data will be in array
+
+```javascript
+req.body // Returns array
+req.body.num1 // Returns data stored in num1
+```
+
 
 ## `Other Notes`
 
